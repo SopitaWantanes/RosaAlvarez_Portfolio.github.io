@@ -18,7 +18,62 @@
 		</noscript>
 
 		<style>
-			.carousel-wrapper {
+			
+/* Move title closer to carousel */
+/* HEADER SPACING */
+.custom-header {
+    margin-top: -40px;   /* move closer to carousel */
+    text-align: center;
+}
+
+/* TITLE */
+.custom-header h2 {
+    margin-bottom: 10px;
+}
+
+/* DATE */
+.custom-date {
+    display: block;
+    margin-bottom: 25px;
+    font-size: 14px;
+    color: #777;
+}
+
+/* DESCRIPTION */
+.custom-description {
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+    line-height: 1.6;
+}
+
+/* VIDEO */
+.video-container {
+    width: 80%;
+    margin: 0 auto 50px auto;
+}
+
+/* BUTTON */
+.custom-actions {
+    margin-top: 10px;
+}
+/* YouTube Video Styling */
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    margin-top: 1rem;
+}
+
+.video-container iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 8px;
+}
+            
+            .carousel-wrapper {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -295,36 +350,45 @@
 </div>
 
 				<!-- Featured Post -->
-				<article class="post featured">
-					<header class="major">
-						<span class="date">April 24, 2026</span>
-						<h2>
-							<a href="#">
-								Warehouse Analysis<br />
-								in SQL Sever
-							</a>
-						</h2>
-						<p>
-							End-to-end data warehouse and analytics solution built with SQL Server, 
-							integrating ERP and CRM data to deliver actionable insights on 
-							customer behavior, product performance, and sales trends.
-						</p>
-					</header>
+			<article class="post featured">
+    <header class="major custom-header">
 
-					<a href="#" class="image main">
-						<img src="images/pic01.jpg" alt="" />
-					</a>
+        <h2>
+            <a href="#">
+                Warehouse Analysis<br />
+                in SQL Server
+            </a>
+        </h2>
 
-					<ul class="actions special">
-						<li>
-							<a href="https://github.com/SopitaWantanes/SQL-Data-Warehouse-Prject2026" 
-  								 class="button" 
-   									target="_blank">
-  									 View GitHub Repository
-							</a>
-						</li>
-					</ul>
-				</article>
+        <span class="date custom-date">April 24, 2026</span>
+
+        <p class="custom-description">
+            End-to-end data warehouse and analytics solution built with SQL Server, 
+            integrating ERP and CRM data to deliver actionable insights on 
+            customer behavior, product performance, and sales trends.
+        </p>
+
+    </header>
+
+    <div class="video-container">
+        <iframe 
+            src="https://www.youtube.com/embed/cQl-_Gwvpkk"
+            title="Data Warehouse Project"
+            frameborder="0"
+            allowfullscreen>
+        </iframe>
+    </div>
+
+    <ul class="actions special custom-actions">
+        <li>
+            <a href="https://github.com/SopitaWantanes/SQL-Data-Warehouse-Prject2026" 
+               class="button" 
+               target="_blank">
+               View GitHub Repository
+            </a>
+        </li>
+    </ul>
+</article>
 
 				<!-- Posts -->
 
