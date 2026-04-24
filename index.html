@@ -19,134 +19,136 @@
 
 		<style>
 			.carousel-wrapper {
-				width: 100%;
-				display: flex;
-				justify-content: center;
-				margin-bottom: 4rem;
-			}
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 3rem auto 4rem auto;
+}
 
-			.carousel {
-				position: relative;
-				width: 100%;
-				max-width: 1000px;
-				margin: 0 auto;
-			}
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 70px;
+}
 
-			.carousel-inner {
-				width: 100%;
-				height: 420px;
-				overflow: hidden;
-				border-radius: 12px;
-				background: #f4f4f4;
-				box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-				position: relative;
-			}
+.carousel-inner {
+    width: 100%;
+    height: 420px;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #f4f4f4;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    position: relative;
+}
 
-			.carousel-slide {
-				position: absolute;
-				inset: 0;
-				opacity: 0;
-				transition: opacity 0.5s ease;
-			}
+.carousel-slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
 
-			.carousel-slide.active {
-				opacity: 1;
-			}
+.carousel-slide.active {
+    opacity: 1;
+}
 
-			.carousel-slide a,
-			.carousel-slide img {
-				display: block;
-				width: 100%;
-				height: 100%;
-			}
+.carousel-slide a,
+.carousel-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
 
-			.carousel-slide img {
-				object-fit: contain;
-				background: #f5f5f5;
-			}
+.carousel-slide img {
+    object-fit: contain;
+    background: #f5f5f5;
+}
 
-			.carousel-caption {
-				position: absolute;
-				bottom: 22px;
-				left: 50%;
-				transform: translateX(-50%);
-				background: rgba(0, 0, 0, 0.55);
-				color: white;
-				padding: 10px 22px;
-				border-radius: 10px;
-				font-family: Aptos, "Segoe UI", sans-serif;
-				font-size: 1.1rem;
-				font-weight: 600;
-				text-align: center;
-				white-space: nowrap;
-			}
+.carousel-caption {
+    position: absolute;
+    bottom: 22px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 10px 24px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    white-space: nowrap;
+}
 
-			.carousel-btn {
-				position: absolute;
-				top: 50%;
-				transform: translateY(-50%);
-				width: 58px;
-				height: 44px;
-				border-radius: 30px;
-				border: 2px solid #c7d1d9;
-				background: #eef3f7;
-				color: #5b6b78;
-				font-size: 28px;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				cursor: pointer;
-				z-index: 5;
-			}
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 42px;
+    border-radius: 25px;
+    border: 2px solid #c7d1d9;
+    background: #eef3f7;
+    color: #123047;
+    font-size: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+}
 
-			.carousel-btn.prev {
-				left: -30px;
-			}
+.carousel-btn.prev {
+    left: 5px;
+}
 
-			.carousel-btn.next {
-				right: -30px;
-			}
+.carousel-btn.next {
+    right: 5px;
+}
 
-			.carousel-dots {
-				display: flex;
-				justify-content: center;
-				margin-top: 15px;
-				gap: 10px;
-			}
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 14px;
+    gap: 9px;
+}
 
-			.dot {
-				width: 12px;
-				height: 12px;
-				border-radius: 20px;
-				border: 2px solid #5b6b78;
-				background: white;
-				cursor: pointer;
-				padding: 0;
-			}
+.dot {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    border: 2px solid #5b6b78;
+    background: white;
+    cursor: pointer;
+    padding: 0;
+}
 
-			.dot.active {
-				background: #5b6b78;
-			}
+.dot.active {
+    background: #5b6b78;
+}
 
-			@media screen and (max-width: 980px) {
-				.carousel-inner {
-					height: 320px;
-				}
+@media screen and (max-width: 980px) {
+    .carousel {
+        padding: 0 45px;
+    }
 
-				.carousel-btn.prev {
-					left: 10px;
-				}
+    .carousel-inner {
+        height: 320px;
+    }
 
-				.carousel-btn.next {
-					right: 10px;
-				}
+    .carousel-btn {
+        width: 42px;
+        height: 38px;
+        font-size: 22px;
+    }
 
-				.carousel-caption {
-					white-space: normal;
-					width: calc(100% - 2rem);
-					max-width: 520px;
-				}
-			}
+    .carousel-caption {
+        white-space: normal;
+        width: calc(100% - 2rem);
+        max-width: 520px;
+    }
+}
 		</style>
 	</head>
 
@@ -222,115 +224,80 @@
 			<!-- Main -->
 			<div id="main">
 				<!-- Carousel -->
-				<div class="carousel-wrapper">
-					<section class="carousel">
-						<div class="carousel-inner">
-							<div class="carousel-slide active">
-								<a
-									href="Power BI PDF/Executive Sales Performance Dashboard.pdf"
-									target="_blank"
-								>
-									<img
-										src="images/Executive_Sales.png"
-										alt="Executive Sales Dashboard"
-									/>
-								</a>
-								<div class="carousel-caption">
-									Executive Sales Dashboard - Power BI
-								</div>
-							</div>
+				
+<div class="carousel-wrapper">
+    <section class="carousel">
 
-							<div class="carousel-slide">
-								<a
-									href="Power BI PDF/Financial Dashboard.pdf"
-									target="_blank"
-								>
-									<img
-										src="images/Financial_Dashboard.png"
-										alt="Financial Dashboard"
-									/>
-								</a>
-								<div class="carousel-caption">
-									Financial Dashboard - Power BI
-								</div>
-							</div>
+        <div class="carousel-inner">
 
-							<div class="carousel-slide">
-								<a
-									href="Power BI PDF/Project Performance Dashboard.pdf"
-									target="_blank"
-								>
-									<img
-										src="images/Project_Performance_Dashboard.png"
-										alt="Project Performance Dashboard"
-									/>
-								</a>
-								<div class="carousel-caption">
-									Project Performance Dashboard - Power BI
-								</div>
-							</div>
+            <div class="carousel-slide active">
+                <a href="Power BI PDF/Executive Sales Performance Dashboard.pdf" target="_blank">
+                    <img src="images/Executive_Sales.png" alt="Executive Sales Dashboard" />
+                </a>
+                <div class="carousel-caption">Executive Sales Dashboard</div>
+            </div>
 
-							<div class="carousel-slide">
-								<a
-									href="Power BI PDF/Sales Performance Dashboard.pdf"
-									target="_blank"
-								>
-									<img
-										src="images/SalesPerformance_Dashboard.png"
-										alt="Sales Performance Dashboard"
-									/>
-								</a>
-								<div class="carousel-caption">
-									Sales Performance Dashboard - Power BI
-								</div>
-							</div>
-						</div>
+            <div class="carousel-slide">
+                <a href="Power BI PDF/Financial Dashboard.pdf" target="_blank">
+                    <img src="images/Financial_Dashboard.png" alt="Financial Dashboard" />
+                </a>
+                <div class="carousel-caption">Financial Dashboard</div>
+            </div>
 
-						<button
-							class="carousel-btn prev"
-							type="button"
-							aria-label="Previous slide"
-						>
-							&#10094;
-						</button>
+            <div class="carousel-slide">
+                <a href="Power BI PDF/Project Performance Dashboard.pdf" target="_blank">
+                    <img src="images/Project_Performance_Dashboard.png" alt="Project Performance Dashboard" />
+                </a>
+                <div class="carousel-caption">Project Performance Dashboard</div>
+            </div>
 
-						<button
-							class="carousel-btn next"
-							type="button"
-							aria-label="Next slide"
-						>
-							&#10095;
-						</button>
+            <div class="carousel-slide">
+                <a href="Power BI PDF/Sales Performance Dashboard.pdf" target="_blank">
+                    <img src="images/SalesPerformance_Dashboard.png" alt="Sales Performance Dashboard" />
+                </a>
+                <div class="carousel-caption">Sales Performance Dashboard</div>
+            </div>
 
-						<div class="carousel-dots" aria-label="Carousel pagination">
-							<button
-								class="dot active"
-								type="button"
-								aria-label="Slide 1"
-							></button>
-							<button
-								class="dot"
-								type="button"
-								aria-label="Slide 2"
-							></button>
-							<button
-								class="dot"
-								type="button"
-								aria-label="Slide 3"
-							></button>
-							<button
-								class="dot"
-								type="button"
-								aria-label="Slide 4"
-							></button>
-						</div>
-					</section>
-				</div>
+            <div class="carousel-slide">
+                <a href="#">
+                    <img src="images/Material_Catalogue.png" alt="Material Catalogue Dashboard" />
+                </a>
+                <div class="carousel-caption">Material Catalogue Dashboard</div>
+            </div>
+
+            <div class="carousel-slide">
+                <a href="Power BI PDF/Body Tracker Dashboard.pdf" target="_blank">
+                    <img src="images/Body_Tracker.png" alt="Body Tracker Dashboard" />
+                </a>
+                <div class="carousel-caption">Body Tracker Dashboard</div>
+            </div>
+
+        </div>
+
+        <button class="carousel-btn prev" type="button" aria-label="Previous slide">
+            &#10094;
+        </button>
+
+        <button class="carousel-btn next" type="button" aria-label="Next slide">
+            &#10095;
+        </button>
+
+        <div class="carousel-dots" aria-label="Carousel pagination">
+            <button class="dot active" type="button" aria-label="Slide 1"></button>
+            <button class="dot" type="button" aria-label="Slide 2"></button>
+            <button class="dot" type="button" aria-label="Slide 3"></button>
+            <button class="dot" type="button" aria-label="Slide 4"></button>
+            <button class="dot" type="button" aria-label="Slide 5"></button>
+            <button class="dot" type="button" aria-label="Slide 6"></button>
+        </div>
+
+    </section>
+</div>
 
 				<!-- Featured Post -->
 				<article class="post featured">
 					<header class="major">
-						<span class="date">April 24, 2017</span>
+						<span class="date">April 24, 2026</span>
 						<h2>
 							<a href="#">
 								Warehouse Analysis<br />
@@ -338,11 +305,9 @@
 							</a>
 						</h2>
 						<p>
-							Aenean ornare velit lacus varius enim ullamcorper proin
-							aliquam<br />
-							facilisis ante sed etiam magna interdum congue. Lorem ipsum
-							dolor<br />
-							amet nullam sed etiam veroeros.
+							End-to-end data warehouse and analytics solution built with SQL Server, 
+							integrating ERP and CRM data to deliver actionable insights on 
+							customer behavior, product performance, and sales trends.
 						</p>
 					</header>
 
@@ -352,235 +317,154 @@
 
 					<ul class="actions special">
 						<li>
-							<a href="#" class="button large">View Project</a>
+							<a href="https://github.com/SopitaWantanes/SQL-Data-Warehouse-Prject2026" 
+  								 class="button" 
+   									target="_blank">
+  									 View GitHub Repository
+							</a>
 						</li>
 					</ul>
 				</article>
 
 				<!-- Posts -->
-				<section class="posts">
-					<article>
-						<header>
-							<span class="date">December, 2025</span>
-							<h2>
-								<a href="#">
-									Distribution Dashboard<br />
-									Power BI
-								</a>
-							</h2>
-						</header>
-
-						<a href="#" class="image fit">
-							<img src="images/pic02.jpg" alt="" />
-						</a>
-
-						<p>
-							Donec eget ex magna. Interdum et malesuada fames ac ante ipsum
-							primis in faucibus. Pellentesque venenatis dolor imperdiet dolor
-							mattis sagittis magna etiam.
-						</p>
-
-						<ul class="actions special">
-							<li>
-								<a href="#" class="button">View Project</a>
-							</li>
-						</ul>
-					</article>
-
-					<article>
-						<header>
-							<span class="date">April 22, 2017</span>
-							<h2>
-								<a href="#">
-									Financial Dashboard<br />
-									Power BI
-								</a>
-							</h2>
-						</header>
-
-						<div style="text-align: center; margin: 2rem 0;">
-							<a
-								href="Power BI PDF/Financial Dashboard.pdf"
-								target="_blank"
-								class="image fit"
-							>
-								<img
-									src="images/Financial_Dashboard.png"
-									alt="Financial Dashboard Preview"
-									style="max-width: 750px; width: 100%; height: 350px;"
-								/>
-							</a>
-						</div>
-
-						<p>
-							Interactive Power BI dashboard analyzing financial execution,
-							department performance, and investment monitoring.
-						</p>
-
-						<ul class="actions special">
-							<li>
-								<a
-									href="Power BI PDF/Financial Dashboard.pdf"
-									class="button"
-									target="_blank"
-								>
-									View Financial Dashboard PDF
-								</a>
-							</li>
-						</ul>
-					</article>
-
-					<article>
-						<header>
-							<span class="date">April 12, 2020</span>
-							<h2>
-								<a href="#">
-									Executive Sales<br />
-									Power BI
-								</a>
-							</h2>
-						</header>
-
-						<div style="text-align: center; margin: 2rem 0;">
-							<a
-								href="Power BI PDF/Executive Sales Performance Dashboard.pdf"
-								target="_blank"
-								class="image fit"
-							>
-								<img
-									src="images/Executive_Sales.png"
-									alt="Executive Sales Preview"
-									style="max-width: 750px; width: 100%; height: 350px;"
-								/>
-							</a>
-						</div>
-
-						<p>
-							Interactive dashboard showing sales, revenue, profit, customer
-							growth, and product performance to support data-driven business
-							decisions.
-						</p>
-
-						<ul class="actions special">
-							<li>
-								<a
-									href="Power BI PDF/Executive Sales Performance Dashboard.pdf"
-									class="button"
-								>
-									View Executive Sales PDF
-								</a>
-							</li>
-						</ul>
-					</article>
-
-					<article>
-						<header>
-							<span class="date">December 01, 2019</span>
-							<h2>
-								<a href="#">
-									Sales Performance<br />
-									Power BI
-								</a>
-							</h2>
-						</header>
-
-						<div style="text-align: center; margin: 2rem 0;">
-							<a
-								href="Power BI PDF/Sales Performance Dashboard.pdf"
-								target="_blank"
-								class="image fit"
-							>
-								<img
-									src="images/SalesPerformance_Dashboard.png"
-									alt="Sales Performance Preview"
-									style="max-width: 750px; width: 100%; height: 350px;"
-								/>
-							</a>
-						</div>
-
-						<p>
-							Interactive dashboard analyzing sales performance, revenue
-							trends, and profitability across products and regions.
-						</p>
-
-						<ul class="actions special">
-							<li>
-								<a
-									href="Power BI PDF/Sales Performance Dashboard.pdf"
-									class="button"
-								>
-									View Sales Performance PDF
-								</a>
-							</li>
-						</ul>
-					</article>
-
-					<article>
-						<header>
-							<span class="date">April 11, 2017</span>
-							<h2>
-								<a href="#">
-									Project Performance<br />
-									Power BI
-								</a>
-							</h2>
-						</header>
 
 
-						<div style="text-align: center; margin: 2rem 0;">
-							<a
-								href="Power BI PDF/Project Performance Dashboard.pdf"
-								target="_blank"
-								class="image fit"
-							>
-								<img
-									src="images/Project_Performance_Dashboard.png"
-									alt="Project Performance Preview"
-									style="max-width: 750px; width: 100%; height: 350px;"
-								/>
-							</a>
-						</div>
-						<p>
-							This dashboard shows a summary of water harvesting interventions from 2017 to 2020, 
-							including the number of reservoirs (qochas), project status, geographic distribution 
-							by department, and investment amounts.
-						</p>
+<section class="posts">
 
-						<ul class="actions special">
-							<li>
-								<a href="#" class="button">View Project Performance PDF</a>
-							</li>
-						</ul>
-					</article>
+    <!-- Project Performance -->
+    <article>
+        <header>
+            <span class="date">April 11, 2017</span>
+            <h2><a href="#">Project Performance Dashboard</a></h2>
+        </header>
 
-					<article>
-						<header>
-							<span class="date">April 7, 2017</span>
-							<h2>
-								<a href="#">
-									Body Tracker<br />
-									Power BI
-								</a>
-							</h2>
-						</header>
+        <div style="text-align: center; margin: 2rem 0;">
+            <a href="Power BI PDF/Project Performance Dashboard.pdf" target="_blank" class="image fit">
+                <img src="images/Project_Performance_Dashboard.png" style="max-width: 750px; width: 100%; height: 350px;" />
+            </a>
+        </div>
 
-						<a href="#" class="image fit">
-							<img src="images/pic07.jpg" alt="" />
-						</a>
+        <p>
+            This dashboard provides a comprehensive overview of project performance, including status, geographic distribution, and investment allocation.
+        </p>
 
-						<p>
-							Donec eget ex magna. Interdum et malesuada fames ac ante ipsum
-							primis in faucibus. Pellentesque venenatis dolor imperdiet dolor
-							mattis sagittis magna etiam.
-						</p>
+        <ul class="actions special">
+            <li><a href="Power BI PDF/Project Performance Dashboard.pdf" class="button" target="_blank">View Project Performance Dashboard</a></li>
+        </ul>
+    </article>
 
-						<ul class="actions special">
-							<li>
-								<a href="#" class="button">Full Story</a>
-							</li>
-						</ul>
-					</article>
-				</section>
+    <!-- Financial Dashboard -->
+    <article>
+        <header>
+            <span class="date">April 22, 2017</span>
+            <h2><a href="#">Financial Dashboard</a></h2>
+        </header>
+
+        <div style="text-align: center; margin: 2rem 0;">
+            <a href="Power BI PDF/Financial Dashboard.pdf" target="_blank" class="image fit">
+                <img src="images/Financial_Dashboard.png" style="max-width: 750px; width: 100%; height: 350px;" />
+            </a>
+        </div>
+
+        <p>
+            An interactive dashboard analyzing financial performance, including revenue, expenses, and investment trends.
+        </p>
+
+        <ul class="actions special">
+            <li><a href="Power BI PDF/Financial Dashboard.pdf" class="button" target="_blank">View Financial Dashboard</a></li>
+        </ul>
+    </article>
+
+    <!-- Sales Performance -->
+    <article>
+        <header>
+            <span class="date">December 01, 2019</span>
+            <h2><a href="#">Sales Performance Dashboard</a></h2>
+        </header>
+
+        <div style="text-align: center; margin: 2rem 0;">
+            <a href="Power BI PDF/Sales Performance Dashboard.pdf" target="_blank" class="image fit">
+                <img src="images/SalesPerformance_Dashboard.png" style="max-width: 750px; width: 100%; height: 350px;" />
+            </a>
+        </div>
+
+        <p>
+            Dashboard analyzing sales trends, revenue performance, and profitability across products and regions.
+        </p>
+
+        <ul class="actions special">
+            <li><a href="Power BI PDF/Sales Performance Dashboard.pdf" class="button" target="_blank">View Sales Performance Dashboard</a></li>
+        </ul>
+    </article>
+
+    <!-- Executive Sales -->
+    <article>
+        <header>
+            <span class="date">April 12, 2020</span>
+            <h2><a href="#">Executive Sales Dashboard</a></h2>
+        </header>
+
+        <div style="text-align: center; margin: 2rem 0;">
+            <a href="Power BI PDF/Executive Sales Performance Dashboard.pdf" target="_blank" class="image fit">
+                <img src="images/Executive_Sales.png" style="max-width: 750px; width: 100%; height: 350px;" />
+            </a>
+        </div>
+
+        <p>
+            High-level dashboard highlighting revenue, profit, customer growth, and product performance.
+        </p>
+
+        <ul class="actions special">
+            <li><a href="Power BI PDF/Executive Sales Performance Dashboard.pdf" class="button" target="_blank">View Executive Sales Dashboard</a></li>
+        </ul>
+    </article>
+
+    <!-- Material Catalogue -->
+    <article>
+        <header>
+            <span class="date">December, 2025</span>
+            <h2><a href="#">Material Catalogue Dashboard</a></h2>
+        </header>
+
+        <div class="image fit">
+            <video width="100%" controls>
+                <source src="images/material-catalogue.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <p>
+            Interactive dashboard for browsing, filtering, and analyzing inventory with detailed product insights and stock tracking.
+        </p>
+
+        <ul class="actions special">
+            <li><a href="#" class="button">View Material Catalogue Dashboard</a></li>
+        </ul>
+    </article>
+
+    <!-- Body Tracker -->
+    <article>
+        <header>
+            <span class="date">April 24, 2026</span>
+            <h2><a href="#">Body Tracker Dashboard</a></h2>
+        </header>
+
+        <div class="image fit">
+            <video width="100%" controls>
+                <source src="images/body-tracker.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <p>
+            Dashboard for tracking nutrition, calories, and activity performance with clear health insights.
+        </p>
+
+        <ul class="actions special">
+            <li><a href="Power BI PDF/Body Tracker Dashboard.pdf" class="button" target="_blank">View Body Tracker Dashboard</a></li>
+        </ul>
+    </article>
+
+</section>
+
 
 				<!-- Footer -->
 				<footer>
