@@ -210,8 +210,28 @@
             min-width: 320px;
             text-align: center;
         }
+    .glowing-page {
+    background: #ffe066 !important;
+    color: #000 !important;
+    font-weight: bold;
+    animation: subtleGlow 2s infinite ease-in-out;
+}
 
-        @media screen and (max-width: 980px) {
+@keyframes subtleGlow {
+    0% {
+        box-shadow: 0 0 5px rgba(255, 224, 102, 0.3);
+    }
+
+    50% {
+        box-shadow: 0 0 15px rgba(255, 224, 102, 0.7);
+    }
+
+    100% {
+        box-shadow: 0 0 5px rgba(255, 224, 102, 0.3);
+    }
+}
+       
+@media screen and (max-width: 980px) {
             .carousel {
                 padding: 0 45px;
             }
@@ -245,27 +265,9 @@
                 min-width: auto;
             }
 
-            .glowing-page {
-    background: #ffe066 !important;
-    color: #000 !important;
-    font-weight: bold;
-    animation: subtleGlow 2s infinite ease-in-out;
-}
+ }
 
-@keyframes subtleGlow {
-    0% {
-        box-shadow: 0 0 5px rgba(255, 224, 102, 0.3);
-    }
 
-    50% {
-        box-shadow: 0 0 15px rgba(255, 224, 102, 0.7);
-    }
-
-    100% {
-        box-shadow: 0 0 5px rgba(255, 224, 102, 0.3);
-    }
-}
-        }
     </style>
 </head>
 
@@ -306,11 +308,7 @@
             </li>
             <li>
                 <a href="elements.html">Skills & Experience</a>
-            </li>
-        
-         <li>
-                <a href="landing-page.html">Highlighted Projects</a>
-            </li>
+            </li>                
         </ul>
 
         <ul class="icons">
