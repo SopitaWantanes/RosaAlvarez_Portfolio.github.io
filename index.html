@@ -244,6 +244,27 @@
             .posts article .button {
                 min-width: auto;
             }
+
+            .glowing-page {
+    background: #ffe066 !important;
+    color: #000 !important;
+    font-weight: bold;
+    animation: subtleGlow 2s infinite ease-in-out;
+}
+
+@keyframes subtleGlow {
+    0% {
+        box-shadow: 0 0 5px rgba(255, 224, 102, 0.3);
+    }
+
+    50% {
+        box-shadow: 0 0 15px rgba(255, 224, 102, 0.7);
+    }
+
+    100% {
+        box-shadow: 0 0 5px rgba(255, 224, 102, 0.3);
+    }
+}
         }
     </style>
 </head>
@@ -285,6 +306,10 @@
             </li>
             <li>
                 <a href="elements.html">Skills & Experience</a>
+            </li>
+        
+         <li>
+                <a href="landing-page.html">Highlighted Projects</a>
             </li>
         </ul>
 
@@ -581,12 +606,39 @@
 
         </section>
 
-        <footer>
-            <div class="pagination">
-                <a href="index.html" class="page active">1</a>
-                <a href="landing-page.html" class="page">2</a>
-            </div>
-        </footer>
+
+
+<footer>
+
+    <div style="
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 1rem;
+    ">
+        <p style="
+            font-size: 1rem;
+            font-weight: 600;
+            margin: 0;
+        ">
+            ⭐ Don’t forget to visit the other pages to explore more projects
+        </p>
+    </div>
+
+    <div class="pagination">
+        <a href="index.html" class="page active">1</a>
+
+        <a href="landing-page.html"
+           class="page glowing-page">
+           2
+        </a>
+    </div>
+
+</footer>
+
+
+
 
     </div>
 
